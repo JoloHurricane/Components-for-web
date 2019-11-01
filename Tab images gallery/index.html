@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="images">
+      <img onclick="changeImg(this)" src="/images/1.jpg" alt="">
+      <img onclick="changeImg(this)" src="/images/2.jpg" alt="">
+      <img onclick="changeImg(this)" src="/images/3.jpg" alt="">
+      <img onclick="changeImg(this)" src="/images/4.jpg" alt="">
+   </div>
+
+   <div class="pre">
+      <a onclick="this.parentElement.style.display='none'" href="#"><ion-icon name="close"></ion-icon></a>
+      <img id="p" src="/images/1.jpg" alt="">
+   </div>
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+   <script>
+   function changeImg(image){
+      let p = document.getElementById("p");
+      p.src = image.src;
+      p.parentElement.style.display="block";
+   }
+   </script>
+</body>
+</html>
